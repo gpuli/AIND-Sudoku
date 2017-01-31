@@ -3,17 +3,17 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: In the naked twins problem, we check for two blocks that have the same value of length 2. We then check each of their peers and make a list of their overlap. Once we have a list of these overlaps, we iterate through this list and eliminate all the values that are repeated in the naked twins. This is because since the naked twins have only two values, they have to be present in the two blocks itself. Using this logic we can safely eliminate these values from their common peers and narrow down the possible values. As we keep doing this for the whole puzzle, this constraint is echoed in other places and propagates itself around the whole puzzle eventually giving us the solution.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: In the diagonal sudoku problem, we add a diagonal unit for the two criss-crossing diagonals. When we do this, for all the blocks that are located on these diagonals, we can eliminate from its diagonal peers all those values that are being repeated. Doing so, propagates the constraints to other areas of the puzzle as well eventually solving the entire puzzle. 
 
 ### Install
 
 This project requires **Python 3**.
 
-We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project.
 Please try using the environment we provided in the Anaconda lesson of the Nanodegree.
 
 ##### Optional: Pygame
